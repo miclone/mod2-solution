@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#container {
+    display: flex;
+    align-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+#container>div {
+    position: relative;
+    display: flex;
+    background-color: darkgray;
+    border: 2px solid black;
+    padding: 10px;
+    min-width: 300px;
+}
+
+.foodname {
+    position: absolute;
+    display: flex;
+    width: 120px;
+    height: 26px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    left: calc(100% - 118px);
+    top: -2px;
+}
+
+.fooddescription {
+    margin-top: 26px;
+}
+
+#chicken {
+    background-color: rgb(231, 170, 204);
+}
+
+#beef {
+    background-color: rgb(240, 101, 58);
+}
+
+#sushi {
+    background-color: rgb(238, 222, 84);
+}
+
+@media only screen and (max-width: 900px) {
+    #container {
+        flex-wrap: wrap;
+    }
+
+    #container>div {
+        flex: 33%;
+    }
+}
